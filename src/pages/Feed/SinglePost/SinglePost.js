@@ -44,7 +44,7 @@ class SinglePost extends Component {
         if (resData.errors) {
           throw new Error("Fetching post failed!");
         }
-        console.log(resData);
+        //console.log(resData);
         this.setState({
           title: resData.data.post.title,
           author: resData.data.post.creator.name,
@@ -54,7 +54,6 @@ class SinglePost extends Component {
           ),
           content: resData.data.post.content,
         });
-        console.log(this.state.image);
       })
       .catch((err) => {
         console.log(err);

@@ -304,7 +304,7 @@ class Feed extends Component {
         if (resData.errors) {
           throw new Error("Deleting the post failed!");
         }
-        console.log(resData);
+        //console.log(resData);
         this.loadPosts();
         // this.setState(prevState => {
         //   const updatedPosts = prevState.posts.filter(p => p._id !== postId);
