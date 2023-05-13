@@ -48,12 +48,13 @@ class SinglePost extends Component {
         this.setState({
           title: resData.data.post.title,
           author: resData.data.post.creator.name,
-          image: `http://localhost:8080${resData.data.post.imageUrl}`,
+          image: `http://localhost:8080/${resData.data.post.imageUrl}`,
           date: new Date(resData.data.post.createdAt).toLocaleDateString(
             "en-US"
           ),
           content: resData.data.post.content,
         });
+        console.log(this.state.image);
       })
       .catch((err) => {
         console.log(err);
